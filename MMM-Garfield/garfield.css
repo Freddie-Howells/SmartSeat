@@ -1,0 +1,26 @@
+/* The basic container */
+.garfield-container {
+    overflow: hidden;
+
+    /* To make the height of the container exact. */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#garfield-content {
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;    /* Required to make ellipsis work */
+  text-overflow: clip;
+
+  top: 0%;
+  
+  -webkit-transition: top 3s, height 3s;
+  -moz-transition: top 3s, height 3s;
+  transition: top 3s, height 3s;
+}
+
+.garfield-image {
+	-webkit-filter: contrast(10) grayscale(1) invert(1);
+}
