@@ -18,7 +18,7 @@ output = np.empty((240, 320, 3), dtype=np.uint8)
 sensor = MotionSensor(4)
 
 #communication
-SERVER_IP   = '192.168.1.120'
+SERVER_IP   = '192.168.1.123'
 PORT_NUMBER = 5000
 SIZE = 1024
 print ("Test client sending packets to IP {0}, via port {1}\n".format(SERVER_IP, PORT_NUMBER))
@@ -65,8 +65,16 @@ def main(name):
     os.system("espeak 'You are sitting in seat number {0}'".format(data))
     if data == "1":
         SERVER_IP = '192.168.1.118'
+    if data == "2":
+        SERVER_IP = '192.168.1.119'
+    if data == "3":
+        SERVER_IP = '192.168.1.120'
+    if data == "4":
+        SERVER_IP = '192.168.1.121'
+    if data == "5":
+        SERVER_IP = '192.168.1.122'
     mySocket.sendto(name.encode('utf-8'),(SERVER_IP,PORT_NUMBER))
-    SERVER_IP = '192.168.1.120'
+    SERVER_IP = '192.168.1.123'
     time.sleep(50)
     
 
